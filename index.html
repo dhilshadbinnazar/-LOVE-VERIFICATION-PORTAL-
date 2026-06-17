@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ridhaa Love Verification Portal ❤️</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow:hidden;
+    text-align:center;
+    color:#fff;
+}
+
+.container{
+    margin-top:100px;
+    padding:20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(10px);
+    padding:30px;
+    border-radius:20px;
+    max-width:600px;
+    margin:auto;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.yesBtn{
+    position:absolute;
+    background:#ff4081;
+    color:white;
+}
+
+.noBtn{
+    background:white;
+    color:#ff4081;
+}
+
+h1,h2,h3{
+    margin-bottom:20px;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(100vh);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container" id="main">
+    <div class="card">
+        <h1>🚨 LOVE VERIFICATION PORTAL 🚨</h1>
+
+        <h2>Welcome Ridhaa ❤️</h2>
+
+        <p>
+            This portal contains highly confidential information.
+            Only one person is authorized to access it.
+        </p>
+
+        <button onclick="startTest()">Enter Secure Portal ❤️</button>
+    </div>
+</div>
+
+<script>
+
+for(let i=0;i<25;i++){
+    let heart=document.createElement("div");
+    heart.className="heart";
+    heart.innerHTML="❤️";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.fontSize=(20+Math.random()*30)+"px";
+    heart.style.animationDuration=(5+Math.random()*5)+"s";
+    document.body.appendChild(heart);
+}
+
+function startTest(){
+
+document.getElementById("main").innerHTML=`
+<div class="card">
+<h1>Relationship Verification System</h1>
+
+<h2>Question 1</h2>
+
+<p>Ridhaa, do you love Dhilshad? 😏</p>
+
+<p id="msg">Try clicking YES ❤️</p>
+
+<button class="yesBtn" id="yesBtn">YES ❤️</button>
+<button class="noBtn" onclick="analysis()">NO 😅</button>
+</div>
+`;
+
+let count=0;
+
+setTimeout(()=>{
+
+let yes=document.getElementById("yesBtn");
+
+yes.style.left="45%";
+yes.style.top="55%";
+
+yes.addEventListener("mouseover",()=>{
+
+count++;
+
+let maxX=window.innerWidth-150;
+let maxY=window.innerHeight-80;
+
+yes.style.left=Math.random()*maxX+"px";
+yes.style.top=Math.random()*maxY+"px";
+
+if(count==5){
+document.getElementById("msg").innerHTML=
+"⚠️ Suspicious activity detected. Ridhaa is avoiding YES.";
+}
+
+if(count==10){
+document.getElementById("msg").innerHTML=
+"🤖 AI concludes: Love level increasing rapidly.";
+}
+
+if(count==15){
+analysis();
+}
+
+});
+
+},100);
+
+}
+
+function analysis(){
+
+document.getElementById("main").innerHTML=`
+<div class="card">
+<h1>🤖 AI Analysis Running...</h1>
+
+<h3 id="loading">Connecting to Love Server...</h3>
+</div>
+`;
+
+let messages=[
+"Checking WhatsApp conversations... ✅",
+"Counting how many times Ridhaa smiled today... ✅",
+"Checking Dhilshad obsession index... ✅",
+"Scanning future wife eligibility... ✅",
+"Calculating love percentage... ✅"
+];
+
+let i=0;
+
+let interval=setInterval(()=>{
+
+document.getElementById("loading").innerHTML=messages[i];
+
+i++;
+
+if(i>=messages.length){
+
+clearInterval(interval);
+
+setTimeout(resultPage,1000);
+
+}
+
+},1500);
+
+}
+
+function resultPage(){
+
+document.getElementById("main").innerHTML=`
+<div class="card">
+
+<h1>📋 FINAL REPORT</h1>
+
+<h2>Subject: Ridhaa ❤️</h2>
+
+<p><strong>Crime:</strong> Stealing Dhilshad's Heart</p>
+
+<p><strong>Evidence:</strong> Too Cute</p>
+
+<p><strong>Love Level:</strong> 9999999%</p>
+
+<p><strong>Thinking About Dhilshad:</strong> 24 Hours Daily</p>
+
+<p><strong>Status:</strong> Future Wife Approved 💍</p>
+
+<p><strong>Appeal:</strong> Rejected ❌</p>
+
+<br>
+
+<button onclick="certificate()">
+Accept Sentence 💍
+</button>
+
+</div>
+`;
+
+}
+
+function certificate(){
+
+document.getElementById("main").innerHTML=`
+<div class="card">
+
+<h1>🎉 CONGRATULATIONS 🎉</h1>
+
+<h2>Ridhaa has unlocked:</h2>
+
+<p>💍 Wife Premium Edition</p>
+<p>❤️ Unlimited Love Subscription</p>
+<p>🤗 Unlimited Hugs Package</p>
+<p>☕ Lifetime Tea & Coffee Requests</p>
+<p>😂 Unlimited Husband Jokes</p>
+
+<br>
+
+<h2>
+Official Partner of Dhilshad ❤️
+</h2>
+
+<h1>
+Love Level: ERROR 🚨
+</h1>
+
+<p>
+Value exceeds system limit.
+</p>
+
+<h3>
+Powered by Dhilshad Industries Pvt. Ltd.
+</h3>
+
+</div>
+`;
+
+}
+
+</script>
+
+</body>
+</html>
